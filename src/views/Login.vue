@@ -22,7 +22,7 @@
       />
       <button
         @click="handleLogin"
-        class="py-4 px-4 bg-green-500 text-white text-xl rounded-lg w-full hover:shadow-md focus:outline-none mt-12"
+        class="py-4 px-4 bg-purple-500 text-white text-xl rounded-lg w-full hover:shadow-md focus:outline-none mt-12"
       >
         登 陆
       </button>

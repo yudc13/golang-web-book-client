@@ -1,12 +1,12 @@
 <template>
   <div class="menu">
     <button
-      class="py-2 px-4 text-green-500 rounded-lg hover:shadow-md focus:outline-none mr-4"
+      class="py-2 px-4 text-purple-500 rounded-lg hover:shadow-md focus:outline-none mr-4"
     >
       登陆
     </button>
     <button
-      class="py-2 px-4 bg-green-500 text-white rounded-lg  hover:shadow-md focus:outline-none"
+      class="py-2 px-4 bg-purple-500 text-white rounded-lg  hover:shadow-md focus:outline-none"
     >
       注册
     </button>
