@@ -32,10 +32,15 @@
 
 <script lang="ts">
 import { defineComponent, reactive, ref, computed } from 'vue'
+import { useStore } from 'vuex'
+import { useRouter } from 'vue-router'
 import { login } from '@/api/user'
+import { State } from '@/store'
 export default defineComponent({
   name: 'Login',
   setup() {
+    const store = useStore<State>()
+    const router = useRouter()
     const loginForm = reactive({
       username: '',
       password: ''
@@ -45,7 +50,8 @@ export default defineComponent({
     const handleLogin = async () => {
       try {
         const { data } = await login(loginForm.username, loginForm.password)
-        console.log(data)
+        store.commit('setUser', data)
+        await router.push('/')
       } catch (e) {
         errorMsg.value = e
       }

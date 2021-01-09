@@ -2,6 +2,8 @@ import request from '@/utils/request'
 
 export interface User {
   id: number
+  username: string
+  email: string
 }
 
 export interface Register {
@@ -17,4 +19,8 @@ export const login = (username: string, password: string) => {
 
 export const register = (data: Register) => {
   return request.post('/register', data)
+}
+
+export const getUserInfo = () => {
+  return request.get<User>('/user')
 }

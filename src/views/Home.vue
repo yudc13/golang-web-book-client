@@ -35,7 +35,7 @@ export default defineComponent({
     const fetchBookList = async (params: BookParams) => {
       try {
         const { data } = await queryBookList(params)
-        bookList.value = data
+        bookList.value = data.books
       } catch (e) {
         console.log(e)
       }

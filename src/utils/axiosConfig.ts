@@ -10,7 +10,7 @@ const axiosConfig: AxiosRequestConfig = {
     }
   ],
   // 查询对象序列化
-  paramsSerializer: (params: any) => {
+  paramsSerializer: (params: unknown) => {
     return Qs.stringify(params)
   },
   // 必须手动加上，否则返回的格式是一个string

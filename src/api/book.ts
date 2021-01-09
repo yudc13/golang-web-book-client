@@ -16,6 +16,16 @@ export interface BookParams {
   pageSize: number
 }
 
+export interface BookPage {
+  books: Book[]
+  page_info: {
+    current_page: number
+    page_size: number
+    total: number
+    total_page: number
+  }
+}
+
 export const queryBookList = (data: BookParams) => {
-  return request.post<Book[]>('/books', data)
+  return request.post<BookPage>('/books', data)
 }
